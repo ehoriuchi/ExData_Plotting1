@@ -18,6 +18,7 @@ powerConsumptionSub$Global_active_power <- as.numeric(powerConsumptionSub$Global
 
 ## Plot 3
 
+png(filename="plot3.png", height=480, width=480, bg="transparent")
 with(powerConsumptionSub, {
         plot(Sub_metering_1 ~ Datetime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
         lines(Sub_metering_2 ~ Datetime,col='Red')
@@ -28,5 +29,4 @@ legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, legend=c("Sub_me
 
 ## Saving to file
 
-dev.copy(png, file="plot3.png", height=480, width=480)
 dev.off()
