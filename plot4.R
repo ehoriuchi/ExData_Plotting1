@@ -18,6 +18,8 @@ powerConsumptionSub$Global_active_power <- as.numeric(powerConsumptionSub$Global
 
 ## Plot 4
 
+png(filename="plot4.png", height=480, width=480, bg="transparent")
+
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
 
 with(powerConsumptionSub, {
@@ -31,7 +33,5 @@ with(powerConsumptionSub, {
 })
 
 ## Saving to file
-
-dev.copy(png, file="plot4.png", height=480, width=480)
 
 dev.off()
