@@ -14,7 +14,6 @@ powerConsumptionSub$Datetime <- as.POSIXct(dateTime)
 powerConsumptionSub$Global_active_power <- as.numeric(powerConsumptionSub$Global_active_power)
 
 ## Plot 2
+png(filename="plot2.png", height=480, width=480, bg="transparent")
 plot(powerConsumtionSub$Global_active_power ~ powerConsumptionSub$Datetime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
-dev.copy(png, file="plot2.png", height=480, width=480)
 dev.off()
-
